@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* position relative create the boundary for position absolute */
         .box1 {
-            width: 400px;
+            width:400px;
             height: 80px;
+            height: ;
             background-color: white;
             border-radius: 5px;
             position: absolute;
@@ -23,13 +23,14 @@
             height: 500px;
             position: relative;
         }
-        /* position absolute use for overlaping and position relative use for boundary fixed */
+
         .parent pizza {
             position: absolute;
             width: 100%;
         }
+
         .parent icon {
-            width:50px ;
+            width: 50px;
             height: 20px;
         }
     </style>
@@ -37,13 +38,14 @@
 
 <body>
     <div>
-    <div class="parent">
-        <img class="pizza" src="assets/images/Pizza/product1.png">
-        <div class="box1">
-            <img class="icon" src="assets/images/Pizza/pizzaIcon.png">
-            <div>pizza</div>
+        <div class="parent">
+            <img class="pizza" src="assets/images/Pizza/product1.png">
+            <div class="box1">
+                <img src="assets/images/Pizza/pizzaIcon.png">
+                <div>pizza</div>
+            </div>
+
         </div>
-    </div>
 </body>
 
 </html>
