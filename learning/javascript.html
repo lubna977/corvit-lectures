@@ -12,19 +12,38 @@
 
 <body>
     <h1 id="heading">Hello corvit</h1>
+    <button class="btn btn-success" onclick="textData();">Click me</button>
+    <input id="colorPick" type="color">
     <!-- <button  type="button" class="btn btn-primary" onclick="document.getElementById('heading').innerHTML='Text Changed'; ">
         Click me
     </button> -->
-    <button class="btn btn-primary" onclick="">
+    <!-- <button class="btn btn-primary" onclick="">
         Click Me
-    </button>
+    </button> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-     <!-- <script>
+    <!-- <script>
         // document.getElementById("heading").innerHTML="Text Changed";
      </script> -->
+    <script>
+        //  function textData(){
+        //     document.getElementById('heading').innerHTML="Text changed";
+        //     document.getElementById('heading').style.color="yellow";
+        //     document.getElementById('heading').style.fontSize="4rem";
+
+        function textData() {
+            // var x = 5;
+            // var y = 10;
+            // var z="hello"
+            // document.getElementById('heading').innerHTML = x-z;
+            var color = document.getElementById('colorPick').value;
+            document.getElementById('heading').style.color =color;
+
+        }
+
+    </script>
 </body>
 
 </html>
