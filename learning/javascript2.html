@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <h1 id="time">clock</h1>
+    <button class="btn btn-primary" onclick="startTime" ();>startClock</button>
+
+    <input type="number" id="age" class="form-control w-25" placeholder="Enter Your Age">
+    <button class="btn btn-primary" onclick="textData();">Click me</button>
+
+
+    <h1 id="heading2">Show/HideText</h1>
+    <button class="btn btn-danger" onclick="ShowHideText();">Show/HideText</button>
+
+    <input type="password" id="passInput" class="form-control w-25" placeholder="Enter your password">
+    <i id="eyeIcon" class="bi bi-eye-fill" onclick="showHidePassword()"></i>
+    <h1 id="dice"></h1>
+    <button class="btn btn-warning" onclick=" getRndInteger();">click me</button>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+        </script>
+    <script>
+        function textData() {
+            var age = document.getElementById("age").value;
+            if (age > 35) {
+                document.getElementById("heading").innerHTML = "You Are Old !!";
+            }
+            else {
+                document.getElementById("heading").innerHTML = "You Are Young !!";
+
+            }
+        }
+        // Function 2
+        function ShowHideText() {
+            var ShowHideText = document.getElementById("heading2");
+            if (ShowHideText.style.display == 'none') {
+                ShowHideText.style.display = 'block';
+            }
+            else {
+                ShowHideText.style.display = 'none';
+            }
+        }
+        // Function 3
+        function showHidePassword() {
+            var passwordInput = document.getElementById("passInput");
+            var icon = document.getElementById("eyeIcon");
+
+            if (passwordInput.type == "password") {
+                passwordInput.type = "text";
+
+                icon.classList.remove("bi-eye-fill");
+                icon.classList.add("bi-eye-slash-fill");
+            }
+            else {
+                passwordInput.type = "password";
+                icon.classList.remove("bi-eye-slash-fill");
+                icon.classList.add("bi-eye-fill");
+            }
+
+        }
+        // Function 4
+        function startTime() {
+            var clock = new Date();
+            document.getElementById('time').innerHTML = clock.toLocaleTimeString();
+        }
+        setInterval(startTime, 1000);
+        function getRndInteger() {
+            var x = Math.floor(Math.random() * 50);
+            document.getElementById('dice').innerHTML = x;
+        }
+
+    </script>
+</body>
+
+</html>
